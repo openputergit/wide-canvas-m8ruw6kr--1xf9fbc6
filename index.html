@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAS Enterprise - Food Packaging Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .custom-shape {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">YAS Enterprise</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-blue-600">Products</a>
+                    <a href="#customize" class="text-gray-700 hover:text-blue-600">Customize</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#home" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="#products" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Products</a>
+            <a href="#customize" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Customize</a>
+            <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="custom-shape bg-blue-600 pt-24 pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Food Packaging Solutions</h1>
+                <p class="text-xl mb-8">Elevate your brand with our customizable packaging options</p>
+                <a href="#products" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Explore Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Cards -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1607435655201-1c2a4a1d2da6" alt="Food Containers" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Food Containers</h3>
+                        <p class="text-gray-600 mb-4">Eco-friendly containers for all your food packaging needs</p>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                            Customize Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f" alt="Bags" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Packaging Bags</h3>
+                        <p class="text-gray-600 mb-4">Custom printed bags for your brand identity</p>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                            Customize Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b" alt="Labels" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Labels & Stickers</h3>
+                        <p class="text-gray-600 mb-4">Professional labels to enhance your packaging</p>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                            Customize Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section id="customize" class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Customize Your Packaging</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <form id="customization-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Product Type</label>
+                            <select class="w-full p-3 border rounded-lg" required>
+                                <option value="">Select a product</option>
+                                <option value="containers">Food Containers</option>
+                                <option value="bags">Packaging Bags</option>
+                                <option value="labels">Labels & Stickers</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Quantity</label>
+                            <input type="number" min="100" class="w-full p-3 border rounded-lg" placeholder="Minimum 100 pieces" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Brand Colors</label>
+                            <input type="color" class="w-full p-1 border rounded-lg" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Special Requirements</label>
+                            <textarea class="w-full p-3 border rounded-lg" rows="4" placeholder="Any specific requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Get Quote
+                        </button>
+                    </form>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="bi bi-boxes text-6xl text-blue-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-4">Why Choose Our Customization?</h3>
+                        <ul class="text-left space-y-4">
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i> Premium Quality Materials</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i> Eco-friendly Options</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i> Fast Turnaround Time</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i> Competitive Pricing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full p-3 border rounded-lg" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full p-3 border rounded-lg" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea class="w-full p-3 border rounded-lg" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Our Information</h3>
+                    <div class="space-y-4">
+                        <p class="flex items-center"><i class="bi bi-geo-alt mr-2"></i> 123 Business Street, City, Country</p>
+                        <p class="flex items-center"><i class="bi bi-telephone mr-2"></i> +1 234 567 890</p>
+                        <p class="flex items-center"><i class="bi bi-envelope mr-2"></i> info@yasenterprise.com</p>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-700"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-700"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-700"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-700"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">YAS Enterprise</h4>
+                    <p class="text-gray-400">Your trusted partner in food packaging solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#customize" class="text-gray-400 hover:text-white">Customize</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Food Containers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Packaging Bags</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Labels & Stickers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Newsletter</h4>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Your email" class="w-full p-2 rounded bg-gray-800 text-white border-gray-700">
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 YAS Enterprise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submissions
+        document.getElementById('customization-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your customization request! We will get back to you soon.');
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you shortly.');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
